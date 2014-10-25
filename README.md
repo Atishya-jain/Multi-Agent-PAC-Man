@@ -68,7 +68,8 @@ recognize that now we're evaluating *states* rather than actions, as we were for
 evaluate future states whereas reflex agents evaluate actions from the current state.
 The minimax values of the initial state in the minimaxClassic layout are 9, 8, 7, -492 for depths 1, 2, 3 and 4 respectively.
 Note that your minimax agent will often win (665/1000 games for us) despite the dire prediction of depth 4 minimax.
-          python pacman.py -p MinimaxAgent -l minimaxClassic -a depth=4
+python pacman.py -p MinimaxAgent -l minimaxClassic -a depth=4
+-------------------------------------------------------------
 To increase the search depth achievable by your agent, remove the Directions.STOP action from Pac-Man's list of possible
 actions. Depth 2 should be pretty quick, but depth 3 or 4 will be slow. Don't worry, the next question will speed up the search
 somewhat.
