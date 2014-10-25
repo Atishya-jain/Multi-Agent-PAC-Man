@@ -29,8 +29,8 @@ Question 1 :
 Improve the ReflexAgent in multiAgents.py to play respectably. The provided reflex agent code provides
 some helpful examples of methods that query the GameState for information. A capable reflex agent will have to consider both
 food locations and ghost locations to perform well. Your agent should easily and reliably clear the testClassic layout:
-        python pacman.py -p ReflexAgent -l testClassic
-        ==============================================
+python pacman.py -p ReflexAgent -l testClassic
+==============================================
 Try out your reflex agent on the default mediumClassic layout with one ghost or two (and animation off to speed up the display):
         python pacman.py --frameTime 0 -p ReflexAgent -k 1
         ==================================================
