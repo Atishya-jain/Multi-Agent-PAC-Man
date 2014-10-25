@@ -6,7 +6,6 @@ both minimax and expectimax search and try your hand at evaluation function desi
 The code for this project contains the following files, available as multiagent.zip.
 
 multiAgents.py :Where all of your multi-agent search agents will reside.
-===============
 pacman.py : The main file that runs Pac-Man games. This file also describes a Pac-Man GameState type, which you will use extensively in this project
 game.py : The logic behind how the Pac-Man world works. This file describes several supporting types like AgentState, Agent, Direction, and Grid.
 util.py : Useful data structures for implementing search algorithms.
@@ -25,13 +24,18 @@ Note that it plays quite poorly even on simple layouts:
         python pacman.py -p ReflexAgent -l testClassic
 Inspect its code (in multiAgents.py) and make sure you understand what it's doing.
 
-Question 1 : Improve the ReflexAgent in multiAgents.py to play respectably. The provided reflex agent code provides
+Question 1 : 
+===========
+Improve the ReflexAgent in multiAgents.py to play respectably. The provided reflex agent code provides
 some helpful examples of methods that query the GameState for information. A capable reflex agent will have to consider both
 food locations and ghost locations to perform well. Your agent should easily and reliably clear the testClassic layout:
         python pacman.py -p ReflexAgent -l testClassic
+        ==============================================
 Try out your reflex agent on the default mediumClassic layout with one ghost or two (and animation off to speed up the display):
         python pacman.py --frameTime 0 -p ReflexAgent -k 1
+        ==================================================
         python pacman.py --frameTime 0 -p ReflexAgent -k 2
+        ==================================================
 How does your agent fare? It will likely often die with 2 ghosts on the default board, unless your evaluation function is quite good.
 Note: you can never have more ghosts than the layout permits.
 Note: As features, try the reciprocal of important values (such as distance to food) rather than just the values themselves.
@@ -45,7 +49,9 @@ The autograder will check that your agent can rapidly clear the openClassic layo
 thrashing around infinitely (i.e. repeatedly moving back and forth between two positions, making no progress).
         python pacman.py -p ReflexAgent -l openClassic -n 10 -q
 
-Question 2 : Now you will write an adversarial search agent in the provided MinimaxAgent class stub in
+Question 2 :
+===========
+Now you will write an adversarial search agent in the provided MinimaxAgent class stub in
 multiAgents.py. Your minimax agent should work with any number of ghosts, so you'll have to write an algorithm that is slightly
 more general than what appears in the textbook. In particular, your minimax tree will have multiple min layers (one for each ghost)
 for every max layer.
