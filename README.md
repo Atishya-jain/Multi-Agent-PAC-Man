@@ -32,10 +32,10 @@ food locations and ghost locations to perform well. Your agent should easily and
 python pacman.py -p ReflexAgent -l testClassic
 ==============================================
 Try out your reflex agent on the default mediumClassic layout with one ghost or two (and animation off to speed up the display):
-        python pacman.py --frameTime 0 -p ReflexAgent -k 1
-        ==================================================
-        python pacman.py --frameTime 0 -p ReflexAgent -k 2
-        ==================================================
+python pacman.py --frameTime 0 -p ReflexAgent -k 1
+==================================================
+python pacman.py --frameTime 0 -p ReflexAgent -k 2
+==================================================
 How does your agent fare? It will likely often die with 2 ghosts on the default board, unless your evaluation function is quite good.
 Note: you can never have more ghosts than the layout permits.
 Note: As features, try the reciprocal of important values (such as distance to food) rather than just the values themselves.
@@ -47,7 +47,8 @@ the randomness is preventing you from telling whether your agent is improving, y
 games quickly.
 The autograder will check that your agent can rapidly clear the openClassic layout ten times without dying more than twice or
 thrashing around infinitely (i.e. repeatedly moving back and forth between two positions, making no progress).
-        python pacman.py -p ReflexAgent -l openClassic -n 10 -q
+python pacman.py -p ReflexAgent -l openClassic -n 10 -q
+=======================================================
 
 Question 2 :
 ===========
