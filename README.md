@@ -30,12 +30,12 @@ Improve the ReflexAgent in multiAgents.py to play respectably. The provided refl
 some helpful examples of methods that query the GameState for information. A capable reflex agent will have to consider both
 food locations and ghost locations to perform well. Your agent should easily and reliably clear the testClassic layout:
 python pacman.py -p ReflexAgent -l testClassic
-==============================================
+----------------------------------------------
 Try out your reflex agent on the default mediumClassic layout with one ghost or two (and animation off to speed up the display):
 python pacman.py --frameTime 0 -p ReflexAgent -k 1
-==================================================
+--------------------------------------------------
 python pacman.py --frameTime 0 -p ReflexAgent -k 2
-==================================================
+--------------------------------------------------
 How does your agent fare? It will likely often die with 2 ghosts on the default board, unless your evaluation function is quite good.
 Note: you can never have more ghosts than the layout permits.
 Note: As features, try the reciprocal of important values (such as distance to food) rather than just the values themselves.
@@ -48,7 +48,7 @@ games quickly.
 The autograder will check that your agent can rapidly clear the openClassic layout ten times without dying more than twice or
 thrashing around infinitely (i.e. repeatedly moving back and forth between two positions, making no progress).
 python pacman.py -p ReflexAgent -l openClassic -n 10 -q
-=======================================================
+-------------------------------------------------------
 
 Question 2 :
 ===========
@@ -71,8 +71,7 @@ Note that your minimax agent will often win (665/1000 games for us) despite the 
 python pacman.py -p MinimaxAgent -l minimaxClassic -a depth=4
 -------------------------------------------------------------
 To increase the search depth achievable by your agent, remove the Directions.STOP action from Pac-Man's list of possible
-actions. Depth 2 should be pretty quick, but depth 3 or 4 will be slow. Don't worry, the next question will speed up the search
-somewhat.
+actions. Depth 2 should be pretty quick, but depth 3 or 4 will be slow. Don't worry, the next question will speed up the search somewhat.
 Pac-Man is always agent 0, and the agents move in order of increasing agent index.
 All states in minimax should be GameStates, either passed in to getAction or generated via GameState.generateSuccessor.
 In this project, you will not be abstracting to simplified states.
@@ -83,16 +82,20 @@ will clean up all of these issues.
 When Pac-Man believes that his death is unavoidable, he will try to end the game as soon as possible because of the
 constant penalty for living. Sometimes, this is the wrong thing to do with random ghosts, but minimax agents always
 assume the worst:
-            python pacman.py -p MinimaxAgent -l trappedClassic -a depth=3
+python pacman.py -p MinimaxAgent -l trappedClassic -a depth=3
+-------------------------------------------------------------
 Make sure you understand why Pac-Man rushes the closest ghost in this case.
 
 
-Question 3 : Make a new agent that uses alpha-beta pruning to more efficiently explore the minimax tree, in
+Question 3 : 
+============
+Make a new agent that uses alpha-beta pruning to more efficiently explore the minimax tree, in
 AlphaBetaAgent. Again, your algorithm will be slightly more general than the pseudo-code in the textbook, so part of the
 challenge is to extend the alpha-beta pruning logic appropriately to multiple minimizer agents.
 You should see a speed-up (perhaps depth 3 alpha-beta will run as fast as depth 2 minimax). Ideally, depth 3 on smallClassic
 should run in just a few seconds per move or faster.
-            python pacman.py -p AlphaBetaAgent -a depth=3 -l smallClassic
+python pacman.py -p AlphaBetaAgent -a depth=3 -l smallClassic
+-------------------------------------------------------------
 The AlphaBetaAgent minimax values should be identical to the MinimaxAgent minimax values, although the actions it selects
 can vary because of different tie-breaking behavior. Again, the minimax values of the initial state in the minimaxClassic layout
 are 9, 8, 7 and -492 for depths 1, 2, 3 and 4 respectively.
