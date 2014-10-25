@@ -5,7 +5,8 @@ both minimax and expectimax search and try your hand at evaluation function desi
 
 The code for this project contains the following files, available as multiagent.zip.
 
-multiAgents.py :  Where all of your multi-agent search agents will reside.
+multiAgents.py :Where all of your multi-agent search agents will reside.
+===============
 pacman.py : The main file that runs Pac-Man games. This file also describes a Pac-Man GameState type, which you will use extensively in this project
 game.py : The logic behind how the Pac-Man world works. This file describes several supporting types like AgentState, Agent, Direction, and Grid.
 util.py : Useful data structures for implementing search algorithms.
